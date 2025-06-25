@@ -157,6 +157,7 @@ header {
   background: #555;
   top: 0;
   bottom: 0;
+  z-index: 1;
 }
 .timeline-item {
   position: relative;
@@ -164,9 +165,11 @@ header {
   padding-top: 20px;
   padding-bottom: 20px;
   box-sizing: border-box;
+
+  z-index: 2; /* bring timeline items and bullets in front of line */
 }
 .timeline-item.left {
-  left: 0%;
+  left: 0;
   text-align: right;
 }
 .timeline-item.right {
@@ -175,7 +178,7 @@ header {
 }
 .timeline-bullet {
   position: absolute;
-  left: 0%;
+  left: 50%;
   transform: translateX(-50%);
   width: 40px;
   height: 40px;
@@ -232,13 +235,11 @@ header {
 
 /* Position bullets individually */
 .timeline-item.left .timeline-bullet {
-  /* Left panel bullet: on the line, to left side */
   left: 100%;
   top: 45px;
   transform: translateX(-50%);
 }
 .timeline-item.right .timeline-bullet {
-  /* Right panel bullet: on the line, to right side */
   left: -9%;
   top: 45px;
   transform: translateX(50%);
