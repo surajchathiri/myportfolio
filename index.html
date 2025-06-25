@@ -1,17 +1,19 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Suraj Sagar Chathiri Portfolio</title>
+  <!-- Main Stylesheet -->
   <link rel="stylesheet" href="style.css">
-  <!-- Font Awesome -->
+  <!-- Font Awesome for Icons -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-  <!-- EmailJS SDK -->
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-  <header>
+  <header data-aos="fade-down">
     <nav class="navbar">
       <h2 class="logo">Suraj.C</h2>
       <ul class="nav-links">
@@ -26,44 +28,44 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="hero">
+  <section class="hero" data-aos="fade-up">
     <div class="hero-text">
       <h1>Hi, I’m <span class="highlight">Suraj Sagar Chathiri</span></h1>
       <p>Data Analyst specializing in transforming raw data into actionable insights</p>
       <a href="#contact" class="btn-primary">Get In Touch</a>
     </div>
-    <div class="hero-image">
-      <img src="3d.png" alt="Animated Data Analyst">
+    <div class="hero-image" data-aos="fade-left">
+      <img src="3d.png" alt="3D Data Analytics Illustration">
     </div>
   </section>
 
   <!-- About Section -->
-  <section id="about" class="about-section">
+  <section id="about" class="about-section" data-aos="fade-up">
     <h2>About Me</h2>
     <p>Data Analyst with 3 years of experience in Master Data Management, ETL development, and data modeling. Skilled in SQL, Python, and building dashboards in Tableau and Power BI. Experienced in Agile and Waterfall environments, applying ML techniques to solve business problems and drive decision-making.</p>
   </section>
 
   <!-- Skills Section -->
-  <section id="skills" class="skills-section">
+  <section id="skills" class="skills-section" data-aos="fade-up">
     <h2>Technical Skills</h2>
     <div class="skills-container">
-      <div class="skill-group">
+      <div class="skill-group" data-aos="zoom-in">
         <h3>Tools & Programming</h3>
         <p>Python, SQL, VS Code, PyCharm</p>
       </div>
-      <div class="skill-group">
+      <div class="skill-group" data-aos="zoom-in" data-aos-delay="100">
         <h3>Software & Visualization</h3>
         <p>Excel (VBA, Pivot), SPSS, Informatica, Hadoop, Tableau, Power BI, Qlik, SAP, Salesforce, Matplotlib</p>
       </div>
-      <div class="skill-group">
+      <div class="skill-group" data-aos="zoom-in" data-aos-delay="200">
         <h3>ML Algorithms</h3>
         <p>Regression, Classification, Decision Trees, KNN, Naïve Bayes, K-means, Random Forest, Hypothesis Testing</p>
       </div>
-      <div class="skill-group">
+      <div class="skill-group" data-aos="zoom-in" data-aos-delay="300">
         <h3>Database & Cloud</h3>
         <p>MySQL, PostgreSQL, MongoDB, AWS, Azure, GCP</p>
       </div>
-      <div class="skill-group">
+      <div class="skill-group" data-aos="zoom-in" data-aos-delay="400">
         <h3>Libraries</h3>
         <p>Pandas, NumPy, Scikit-learn, TensorFlow, PyTorch, Keras</p>
       </div>
@@ -71,113 +73,109 @@
   </section>
 
   <!-- Experience Section -->
-  <section id="experience" class="experience-section">
+  <section id="experience" class="experience-section" data-aos="fade-up">
     <h2>Professional Experience</h2>
     <div class="timeline">
-      <!-- Caterpillar Financials: Right, Top -->
-      <div class="timeline-item right">
+
+      <div class="timeline-item right" data-aos="fade-left">
         <div class="timeline-bullet"><i class="fas fa-briefcase"></i></div>
         <div class="timeline-content">
           <span class="date">Jun 2024 - Present | Irving, TX</span>
           <h3>Data Analyst</h3>
           <p class="company">Caterpillar Financials</p>
           <ul>
-            <li>Developed Python scripts to extract and manipulate data from Teradata, automating CSV conversion.</li>
+            <li>Developed Python scripts to extract and manipulate data from Teradata.</li>
             <li>Performed statistical analysis and visualization with Python and R.</li>
             <li>Created filters, parameters, and calculated sets in Tableau dashboards.</li>
-            <li>Maintained datasets across Excel, SAS Grid, Access, and SQL.</li>
-            <li>Wrote complex SQL queries using OLAP functions (CSUM, COUNT, RANK).</li>
-            <li>Built regression models, reducing inventory by 18%.</li>
-            <li>Designed ETL processes in Informatica and scheduled with Hadoop/Oozie.</li>
-            <li>Developed Azure Databricks notebooks for data cleansing.</li>
+            <li>Maintained data pipelines across SQL, Excel, and cloud platforms.</li>
+            <li>Built regression models, reducing excess inventory by 18%.</li>
           </ul>
         </div>
       </div>
-      <!-- Bajaj Finance: Left, Bottom -->
-      <div class="timeline-item left">
+
+      <div class="timeline-item left" data-aos="fade-right">
         <div class="timeline-bullet"><i class="fas fa-briefcase"></i></div>
         <div class="timeline-content">
           <span class="date">Jan 2022 - Oct 2023 | India</span>
           <h3>Data Analyst</h3>
           <p class="company">Bajaj Finance</p>
           <ul>
-            <li>Prepared financial reports and dashboards in Power BI & Excel, boosting satisfaction by 30%.</li>
-            <li>Performed variance analysis and forecasting in R, improving efficiency by 35%.</li>
-            <li>Integrated ML insights into Power BI dashboards.</li>
-            <li>Implemented ETL processes with Informatica and Talend.</li>
-            <li>Automated lookups and entries, increasing processing speed.</li>
-            <li>Built classification models for default risk prediction.</li>
-            <li>Utilized Tableau for interactive reporting.</li>
+            <li>Prepared financial dashboards in Power BI and Excel, boosting stakeholder satisfaction by 30%.</li>
+            <li>Performed variance analysis in R, improving data processing efficiency by 35%.</li>
+            <li>Integrated ML insights into Power BI for operational visibility.</li>
+            <li>Automated ETL workflows with Informatica and Talend.</li>
+            <li>Built classification models to predict default risk with high accuracy.</li>
           </ul>
         </div>
       </div>
+
     </div>
   </section>
 
   <!-- Projects Section -->
-  <section id="projects" class="projects-section">
+  <section id="projects" class="projects-section" data-aos="fade-up">
     <h2>Academic Projects & Achievements</h2>
     <div class="project-cards">
-      <div class="project">
+      <div class="project" data-aos="zoom-in">
         <h3>Business Data Visualization using Python</h3>
-        <p>Custom Python tool with Pandas and Matplotlib to explore business trends and improve forecasts.</p>
+        <p>Custom Python tool with Pandas and Matplotlib to explore trends and improve forecasts.</p>
       </div>
-      <div class="project">
+      <div class="project" data-aos="zoom-in" data-aos-delay="100">
         <h3>Obesity Risk Analysis & Visualization</h3>
-        <p>Health data analysis in Excel & Tableau to identify obesity factors and create dashboards.</p>
+        <p>Analyzed health data in Excel & Tableau to identify obesity factors and visualize insights.</p>
       </div>
-      <div class="project">
+      <div class="project" data-aos="zoom-in" data-aos-delay="200">
         <h3>Chocolate Sales & Profit Dashboard</h3>
-        <p>Power BI end-to-end dashboard with star schema, automating KPIs and reducing report time.</p>
-      </ul>
-        </div>
+        <p>Built a Power BI dashboard with star schema, automating KPIs and reducing reporting time.</p>
       </div>
     </div>
   </section>
 
-  <!-- Education -->
-  <section id="education" class="education-section">
-  <h2>Education</h2>
-  <div class="education-container">
-    <div class="education-item">
-      <h3>Master in Business Analytics</h3>
-      <p>Northern Arizona University, Flagstaff, AZ (2020–2022)</p>
+  <!-- Education Section -->
+  <section id="education" class="education-section" data-aos="fade-up">
+    <h2>Education</h2>
+    <div class="education-container">
+      <div class="education-item" data-aos="zoom-in">
+        <h3>Master in Business Analytics</h3>
+        <p>Northern Arizona University, Flagstaff, AZ (2020–2022)</p>
+      </div>
+      <div class="education-item" data-aos="zoom-in" data-aos-delay="100">
+        <h3>Bachelor in Electronics & Communication Engineering</h3>
+        <p>JNTU Hyderabad, India (2016–2020)</p>
+      </div>
     </div>
-    <div class="education-item">
-      <h3>Bachelor in Electronics & Communication Engineering</h3>
-      <p>JNTU Hyderabad, India (2016–2020)</p>
-    </div>
-  </div>
-</section>
+  </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="contact-section">
+  <section id="contact" class="contact-section" data-aos="fade-up">
     <h2>Get In Touch</h2>
     <div class="contact-container">
-      <div class="contact-info">
+      <div class="contact-info" data-aos="fade-right">
         <div class="info-item"><i class="fas fa-envelope"></i><div><h4>Email</h4><p>suraj.chathiri@gmail.com</p></div></div>
         <div class="info-item"><i class="fas fa-phone"></i><div><h4>Phone</h4><p>928-600-3369</p></div></div>
         <div class="info-item"><i class="fas fa-map-marker-alt"></i><div><h4>Location</h4><p>Irving, TX</p></div></div>
       </div>
-      <div class="contact-form">
+      <div class="contact-form" data-aos="fade-left">
         <form id="contact-form">
           <input type="text" name="name" placeholder="Name" required>
           <input type="email" name="email" placeholder="Email" required>
           <input type="text" name="subject" placeholder="Subject" required>
           <textarea name="message" rows="6" placeholder="Message" required></textarea>
-          <button type="submit">Send Message</button>
+          <button type="submit" class="btn-primary">Send Message</button>
         </form>
       </div>
     </div>
   </section>
 
+  <!-- AOS & EmailJS Init -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
+    AOS.init({ duration: 600, once: true });
     (function(){ emailjs.init('szIveviay6N6f_PpK'); })();
-    document.getElementById('contact-form').addEventListener('submit', function(event) {
-      event.preventDefault();
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
       emailjs.sendForm('service_1213','template_ehh3ort',this)
-        .then(function(){ alert('Message sent successfully!'); },
-              function(err){ console.error(err); alert('Failed to send; check console.'); });
+        .then(()=>alert('Message sent!'), err=>{ console.error(err); alert('Send failed.'); });
       this.reset();
     });
   </script>
