@@ -79,7 +79,8 @@ header {
   text-align: center;
 }
 .hero-image img {
-  max-width: 100%;
+  max-width: 80%;
+  height: auto;
   border-radius: 16px;
   animation: float 3s ease-in-out infinite;
 }
@@ -411,6 +412,82 @@ header {
   cursor: pointer;
 }
 @media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact-info,
+  .contact-form {
+    min-width: 100%;
+  }
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  /* Hamburger menu */
+  .hamburger {
+    display: flex;
+  }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 40px;
+    background: #1f1f1f;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  .nav-links.show {
+    display: flex;
+  }
+
+  /* Hero stacks */
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-text,
+  .hero-image {
+    width: 100%;
+  }
+
+  /* Skills stack */
+  .skills-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Timeline full width & left aligned */
+  .timeline::after {
+    left: 20px;
+  }
+  .timeline-item {
+    width: 100%;
+    left: 0 !important;
+    text-align: left !important;
+    padding-left: 60px !important;
+    margin-bottom: 30px;
+  }
+  .timeline-bullet {
+    left: 20px !important;
+    top: 20px !important;
+    transform: none !important;
+  }
+  .timeline-content {
+    margin: 0 !important;
+    padding-top: 60px !important;
+  }
+
+  /* Projects & Education stack */
+  .project-cards,
+  .education-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Contact stacks */
   .contact-container {
     flex-direction: column;
     align-items: center;
