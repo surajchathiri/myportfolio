@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Suraj Sagar Chathiri Portfolio</title>
 
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 
   <!-- Font Awesome for Icons -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-        rel="stylesheet">
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    rel="stylesheet"
+  />
 
   <!-- AOS Animation Library CSS -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css"
-        rel="stylesheet">
+  <link
+    href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+    rel="stylesheet"
+  />
 </head>
 <body>
+  <!-- Custom Cursor -->
+  <div class="custom-cursor"></div>
 
-  <!-- Header (fade-down) -->
+  <!-- Header -->
   <header data-aos="fade-down">
     <nav class="navbar">
       <h2 class="logo">Suraj Chathiri</h2>
@@ -33,7 +39,7 @@
     </nav>
   </header>
 
-  <!-- Hero Section (fade-up / fade-left) -->
+  <!-- Hero Section -->
   <section class="hero" data-aos="fade-up">
     <div class="hero-text" data-aos="fade-right">
       <h1>Hi, I’m <span class="highlight">Suraj Sagar Chathiri</span></h1>
@@ -41,29 +47,52 @@
       <a href="#contact" class="btn-primary">Get In Touch</a>
     </div>
     <div class="hero-image" data-aos="fade-left">
-      <img src="3d.png" alt="Animated Data Analyst">
+      <img
+        src="3d.png"
+        alt="3D Data Analytics Illustration"
+        loading="lazy"
+      />
     </div>
   </section>
 
-  <!-- About Section (fade-up) -->
+  <!-- About Section -->
   <section id="about" class="about-section" data-aos="fade-up">
     <h2>About Me</h2>
-    <p>Data Analyst with 3 years of experience in Master Data Management, ETL development, and data modeling. Skilled in SQL, Python, and building dashboards in Tableau and Power BI. Experienced in Agile and Waterfall environments, applying ML techniques to solve business problems and drive decision-making.</p>
+    <p>
+      Data Analyst with 3 years of experience in Master Data Management, ETL development, and data modeling.
+      Skilled in SQL, Python, and building dashboards in Tableau and Power BI. Experienced in Agile and
+      Waterfall environments, applying ML techniques to solve business problems and drive decision-making.
+    </p>
   </section>
 
-  <!-- Skills Section (fade-up + zoom-in delays) -->
+  <!-- Skills Section -->
   <section id="skills" class="skills-section" data-aos="fade-up">
     <h2>Technical Skills</h2>
     <div class="skills-container">
-      <div class="skill-group" data-aos="zoom-in"><h3>Tools & Programming</h3><p>Python, SQL, VS Code, PyCharm</p></div>
-      <div class="skill-group" data-aos="zoom-in" data-aos-delay="100"><h3>Software & Visualization</h3><p>Excel (VBA, Pivot), SPSS, Informatica, Hadoop, Tableau, Power BI, Qlik, SAP, Salesforce, Matplotlib</p></div>
-      <div class="skill-group" data-aos="zoom-in" data-aos-delay="200"><h3>ML Algorithms</h3><p>Regression, Classification, Decision Trees, KNN, Naïve Bayes, K-means, Random Forest, Hypothesis Testing</p></div>
-      <div class="skill-group" data-aos="zoom-in" data-aos-delay="300"><h3>Database & Cloud</h3><p>MySQL, PostgreSQL, MongoDB, AWS, Azure, GCP</p></div>
-      <div class="skill-group" data-aos="zoom-in" data-aos-delay="400"><h3>Libraries</h3><p>Pandas, NumPy, Scikit-learn, TensorFlow, PyTorch, Keras</p></div>
+      <div class="skill-group" data-aos="zoom-in">
+        <h3>Tools & Programming</h3>
+        <p>Python, SQL, VS Code, PyCharm</p>
+      </div>
+      <div class="skill-group" data-aos="zoom-in" data-aos-delay="100">
+        <h3>Software & Visualization</h3>
+        <p>Excel (VBA, Pivot), SPSS, Informatica, Hadoop, Tableau, Power BI, Qlik, SAP, Salesforce, Matplotlib</p>
+      </div>
+      <div class="skill-group" data-aos="zoom-in" data-aos-delay="200">
+        <h3>ML Algorithms</h3>
+        <p>Regression, Classification, Decision Trees, KNN, Naïve Bayes, K-means, Random Forest, Hypothesis Testing</p>
+      </div>
+      <div class="skill-group" data-aos="zoom-in" data-aos-delay="300">
+        <h3>Database & Cloud</h3>
+        <p>MySQL, PostgreSQL, MongoDB, AWS, Azure, GCP</p>
+      </div>
+      <div class="skill-group" data-aos="zoom-in" data-aos-delay="400">
+        <h3>Libraries</h3>
+        <p>Pandas, NumPy, Scikit-learn, TensorFlow, PyTorch, Keras</p>
+      </div>
     </div>
   </section>
 
-  <!-- Experience Section (fade-up with slide) -->
+  <!-- Experience Section -->
   <section id="experience" class="experience-section" data-aos="fade-up">
     <h2>Professional Experience</h2>
     <div class="timeline">
@@ -105,40 +134,150 @@
     </div>
   </section>
 
-  <!-- Projects Section (fade-up + zoom) -->
-  <section id="projects" class="projects-section" data-aos="fade-up">
-    <h2>Academic Projects & Achievements</h2>
-    <div class="project-cards">
-      <div class="project" data-aos="zoom-in"><h3>Business Data Visualization using Python</h3><p>Custom Python tool with Pandas and Matplotlib to explore business trends and improve forecasts.</p></div>
-      <div class="project" data-aos="zoom-in" data-aos-delay="100"><h3>Obesity Risk Analysis & Visualization</h3><p>Health data analysis in Excel & Tableau to identify obesity factors and create dashboards.</p></div>
-      <div class="project" data-aos="zoom-in" data-aos-delay="200"><h3>Chocolate Sales & Profit Dashboard</h3><p>Power BI end-to-end dashboard with star schema, automating KPIs and reducing report time.</p></div>
-    </div>
-  </section>
+<section id="projects" class="projects-section" data-aos="fade-up">
+  <h2>Academic Projects &amp; Achievements</h2>
 
-  <!-- Education Section (fade-up + zoom) -->
+  <!-- Tabs -->
+  <div class="tabs">
+    <button class="tab-btn active" data-tab="ml">Machine Learning (Python)</button>
+    <button class="tab-btn" data-tab="viz">Visualizations (Power BI & Tableau)</button>
+    <button class="tab-btn" data-tab="ppt">Presentations</button>
+  </div>
+
+  <!-- Machine Learning Tab -->
+  <div class="tab-content active" id="ml">
+    <ul class="resource-list">
+      <li>
+        <span>Machine Learning Using Python</span>
+        <a href="Machine Learning using Python.zip"
+           download
+           class="download-btn">Download</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Visualizations Tab -->
+  <div class="tab-content" id="viz">
+    <div class="viz-buttons">
+      <button onclick="toggleViz('tableauViz')">Tableau</button>
+      <button onclick="toggleViz('powerbiViz')">Power BI</button>
+    </div>
+
+    <!-- BOTH start hidden -->
+    <div id="tableauViz" class="viz-grid hidden">
+      <!-- Obesity Risk Analysis Dashboard -->
+      <div class="project-card">
+        <a href="https://github.com/surajchathiri/Obesity-Risk-Analysis"
+           target="_blank">
+          <img src="Obesity Risk.png"
+               alt="Obesity Risk Analysis Dashboard">
+        </a>
+        <h3>Obesity Risk Analysis Dashboard</h3>
+        <p>Interactive Tableau story exploring the key factors leading to obesity.</p>
+      </div>
+      <!-- European Bank Deposit Behaviour -->
+      <div class="project-card">
+        <a href="https://github.com/surajchathiri/European-Bank-Deposit-Behaviour"
+           target="_blank">
+          <img src="EuropeanBank.png"
+               alt="European Bank Deposit Behaviour Dashboard">
+        </a>
+        <h3>European Bank Deposit Behaviour Dashboard</h3>
+        <p>Drill-down story uncovering how nutritional and lifestyle factors drive obesity risk</p>
+      </div>
+      <!-- Two Hotels in Portugal (new) -->
+      <div class="project-card">
+        <a href="https://github.com/surajchathiri/Two-Hotels-In-Portugal" 
+           target="_blank">
+          <img src="Two Hotels.png" 
+               alt="Two Hotels in Portugal">
+        </a>
+        <h3>Two Hotels in Portugal</h3>
+        <p>Drill-down story analyzing cancellation patterns for resort vs city hotels</p>
+      </div>
+    </div>
+
+    <div id="powerbiViz" class="viz-grid hidden">
+      <div class="project-card">
+        <a href="https://github.com/surajchathiri/Chocolate_Sales"
+           target="_blank">
+          <img src="Chocolate Shipment.png"
+               alt="Chocolate Sales Dashboard">
+        </a>
+        <h3>Chocolate Sales Dashboard</h3>
+        <p>Power BI dashboard analyzing profit margins, top sellers, and global trends.</p>
+      </div>
+    </div>
+    <!-- BOTH end hidden -->
+  </div>
+
+  <!-- Presentations Tab -->
+  <div class="tab-content" id="ppt">
+    <ul class="resource-list">
+      <li>
+        <span>Capstone Presentation</span>
+        <a href="files/capstone-presentation.pptx"
+           download
+           class="download-btn">Download</a>
+      </li>
+      <li>
+        <span>Data Strategy Deck</span>
+        <a href="files/data-strategy-deck.pptx"
+           download
+           class="download-btn">Download</a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+  <!-- Education Section -->
   <section id="education" class="education-section" data-aos="fade-up">
     <h2>Education</h2>
     <div class="education-container">
-      <div class="education-item" data-aos="zoom-in"><h3>Master in Business Analytics</h3><p>Northern Arizona University, Flagstaff, AZ (Jan'24-May'25)</p></div>
-      <div class="education-item" data-aos="zoom-in" data-aos-delay="100"><h3>Bachelor in Electronics & Communication Engineering</h3><p>JNTU Hyderabad, India (June'19–May'23)</p></div>
+      <div class="education-item" data-aos="zoom-in">
+        <h3>Master in Business Analytics</h3>
+        <p>Northern Arizona University, Flagstaff, AZ (Jan &#39;24–May &#39;25)</p>
+      </div>
+      <div class="education-item" data-aos="zoom-in" data-aos-delay="100">
+        <h3>Bachelor in Electronics & Communication Engineering</h3>
+        <p>JNTU Hyderabad, India (June &#39;19–May &#39;23)</p>
+      </div>
     </div>
   </section>
 
-  <!-- Contact Section (unchanged) -->
+  <!-- Contact Section -->
   <section id="contact" class="contact-section">
     <h2>Get In Touch</h2>
     <div class="contact-container">
       <div class="contact-info">
-        <div class="info-item"><i class="fas fa-envelope"></i><div><h4>Email</h4><p>suraj.chathiri@gmail.com</p></div></div>
-        <div class="info-item"><i class="fas fa-phone"></i><div><h4>Phone</h4><p>928-600-3369</p></div></div>
-        <div class="info-item"><i class="fas fa-map-marker-alt"></i><div><h4>Location</h4><p>McKinney, TX</p></div></div>
+        <div class="info-item">
+          <i class="fas fa-envelope"></i>
+          <div>
+            <h4>Email</h4>
+            <p>suraj.chathiri@gmail.com</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-phone"></i>
+          <div>
+            <h4>Phone</h4>
+            <p>928-600-3369</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <div>
+            <h4>Location</h4>
+            <p>McKinney, TX</p>
+          </div>
+        </div>
       </div>
       <div class="contact-form">
         <form id="contact-form">
-          <input type="text"   name="name"    placeholder="Name"    required>
-          <input type="email"  name="email"   placeholder="Email"   required>
-          <input type="text"   name="subject" placeholder="Subject" required>
-          <textarea name="message" rows="6"   placeholder="Message" required></textarea>
+          <input type="text" name="name" placeholder="Name" required />
+          <input type="email" name="email" placeholder="Email" required />
+          <input type="text" name="subject" placeholder="Subject" required />
+          <textarea name="message" rows="6" placeholder="Message" required></textarea>
           <button type="submit">Send Message</button>
         </form>
       </div>
@@ -150,38 +289,87 @@
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
   <script>
     AOS.init({ duration: 600, once: true });
-    (function(){ emailjs.init('49ssht38saUsykvV8'); })();
-    document.getElementById('contact-form').addEventListener('submit', function(event) {
-      event.preventDefault();
-      emailjs.sendForm('service_1213','template_ehh3ort', this)
-        .then(function(){ alert('Message sent successfully!'); },
-              function(err){ console.error(err); alert('Failed to send; check console.'); });
-      this.reset();
-    });
+    (function () {
+      emailjs.init("49ssht38saUsykvV8");
+    })();
+    document
+      .getElementById("contact-form")
+      .addEventListener("submit", function (event) {
+        event.preventDefault();
+        emailjs
+          .sendForm("service_1213", "template_ehh3ort", this)
+          .then(
+            function () {
+              alert("Message sent successfully!");
+            },
+            function (err) {
+              console.error(err);
+              alert("Failed to send; check console.");
+            }
+          );
+        this.reset();
+      });
   </script>
 
-    <!-- Footer -->
+  <!-- Footer -->
   <footer class="footer">
     <div class="footer-content">
       <h3>Suraj Sagar Chathiri</h3>
       <div class="social-icons">
-        <!-- LinkedIn -->
-        <a href="https://www.linkedin.com/in/suraj-sagar-chathiri" target="_blank" aria-label="LinkedIn">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-
-        <!-- Custom X icon -->
-        <a href="https://x.com/ChathiriSuraj" target="_blank" aria-label="X">
-          <img src="x.webp" alt="X logo" class="social-img">
-        </a>
-
-        <!-- GitHub -->
-        <a href="https://github.com/surajchathiri" target="_blank" aria-label="GitHub">
-          <i class="fab fa-github"></i>
-        </a>
+        <a
+          href="https://www.linkedin.com/in/suraj-sagar-chathiri"
+          target="_blank"
+          aria-label="LinkedIn"
+        ><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://x.com/ChathiriSuraj" target="_blank" aria-label="X"
+          ><img src="x.webp" alt="X logo" class="social-img" loading="lazy"
+        /></a>
+        <a
+          href="https://github.com/surajchathiri"
+          target="_blank"
+          aria-label="GitHub"
+        ><i class="fab fa-github"></i></a>
       </div>
       <p>© 2025 Suraj Sagar Chathiri. All rights reserved.</p>
     </div>
   </footer>
 
+  <!-- Custom Cursor Script -->
+  <script>
+    const cursor = document.querySelector(".custom-cursor");
+    document.addEventListener("mousemove", (e) => {
+      cursor.style.top = e.clientY + "px";
+      cursor.style.left = e.clientX + "px";
+    });
+    const interactives = document.querySelectorAll(
+      "a, button, .btn-primary, .project, .timeline-bullet"
+    );
+    interactives.forEach((el) => {
+      el.addEventListener("mouseenter", () => cursor.classList.add("grow"));
+      el.addEventListener("mouseleave", () =>
+        cursor.classList.remove("grow")
+      );
+    });
+  </script>
+  <script>
+    function toggleViz(id) {
+    const tableau = document.getElementById('tableauViz');
+    const powerbi = document.getElementById('powerbiViz');
+    tableau.classList.add('hidden');
+    powerbi.classList.add('hidden');
+    document.getElementById(id).classList.remove('hidden');
+    }
 
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
+    tabButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+    tabButtons.forEach(b => b.classList.remove('active'));
+    tabContents.forEach(c => c.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(btn.dataset.tab).classList.add('active');
+    });
+    });
+  </script>
+</body>
+</html>

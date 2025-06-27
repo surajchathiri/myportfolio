@@ -555,3 +555,334 @@ header {
     font-size: 0.8rem;
   }
 }
+
+/* ─────────────────────────────────────────────────────────────
+   1) Hide native cursor & style our custom one
+───────────────────────────────────────────────────────────── */
+body {
+  cursor: none;
+}
+
+/* Replace your old .custom-cursor block with this */
+
+.custom-cursor {
+  position: fixed;
+  top: 0; left: 0;
+  width: 40px;
+  height: 40px;
+  pointer-events: none;
+  z-index: 9999;
+  /* A radial gradient that fades out, plus blur to soften edges */
+  background: radial-gradient(
+    circle at center,
+    rgba(255,255,255,0.4) 0%,
+    rgba(255,255,255,0.15) 40%,
+    rgba(255,255,255,0) 80%
+  );
+  border-radius: 50%;
+  filter: blur(8px);
+  transition: transform .15s ease-out, background .3s ease;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* keep the grow-on-hover behavior */
+.custom-cursor.grow {
+  transform: translate(-50%, -50%) scale(1.8);
+  background: radial-gradient(
+    circle at center,
+    rgba(255,255,255,0.6) 0%,
+    rgba(255,255,255,0.2) 30%,
+    rgba(255,255,255,0) 70%
+  );
+}
+
+/* ─────────────────────────────────────────────────────────────
+   2) Grow cursor on hover over interactive elements
+───────────────────────────────────────────────────────────── */
+a:hover,
+button:hover,
+.btn-primary:hover,
+.project:hover,
+.timeline-bullet:hover {
+  --cursor-scale: 2.5;
+}
+
+.custom-cursor.grow {
+  transform: translate(-50%, -50%) scale(var(--cursor-scale,1));
+  background: #fff;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   3) Subtle hover lifts & shadows
+───────────────────────────────────────────────────────────── */
+.btn-primary {
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.btn-primary:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+.project {
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.project:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+}
+
+/* Tabs for Projects */
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.tab-btn {
+  padding: 10px 20px;
+  background: #2a2a2a;
+  color: #ddd;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.tab-btn.active,
+.tab-btn:hover {
+  background: #4a90e2;
+  color: #fff;
+}
+
+/* Tab Content */
+.tab-content {
+  display: none;
+  max-width: 800px;
+  margin: auto;
+}
+.tab-content.active {
+  display: block;
+}
+.resource-list {
+  list-style: none;
+  padding: 0;
+}
+.resource-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #2a2a2a;
+  margin-bottom: 12px;
+  padding: 12px 16px;
+  border-radius: 6px;
+}
+.resource-list span {
+  color: #f1f1f1;
+}
+.download-btn {
+  font-size: 0.9rem;
+  padding: 6px 12px;
+  background: #4a90e2;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.download-btn:hover {
+  background: #6f78ff;
+}
+.viz-buttons {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.viz-buttons button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-weight: bold;
+  border: none;
+  background-color: #cb5c00;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.viz-buttons button:hover {
+  background-color: #000000;
+}
+.viz-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.project-card {
+  background: #ffffff;
+  padding: 20px;
+  width: 300px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+  color: #111;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  margin-bottom: 15px;
+}
+
+.project-card img:hover {
+  transform: scale(1.05);
+}
+
+.project-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #111;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.5;
+}
+.hidden {
+  display: none;
+}
+
+/* Style for embedded viz thumbnail inside resource-list */
+.resource-list li.viz-embed {
+  display: flex;
+  align-items: center;
+  background: #2a2a2a;
+  margin-bottom: 12px;
+  padding: 12px;
+  border-radius: 6px;
+}
+.resource-list li.viz-embed .thumb {
+  flex: 0 0 120px;
+  margin-right: 16px;
+}
+.resource-list li.viz-embed .thumb img {
+  width: 100%;
+  border-radius: 4px;
+}
+.resource-list li.viz-embed .desc a {
+  color: #4a90e2;
+  font-weight: bold;
+  text-decoration: none;
+}
+.resource-list li.viz-embed .desc a:hover {
+  text-decoration: underline;
+}
+/* Utility */
+.hidden {
+  display: none !important;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.tab-btn {
+  padding: 8px 16px;
+  background: #2a2a2a;
+  color: #ccc;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.tab-btn.active {
+  background: #4a90e2;
+  color: #fff;
+}
+
+/* Tab Content */
+.tab-content {
+  display: none;
+}
+.tab-content.active {
+  display: block;
+}
+
+/* Visualization Buttons */
+.viz-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.viz-btn {
+  padding: 6px 12px;
+  background: #2a2a2a;
+  color: #ccc;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.viz-btn.active {
+  background: #4a90e2;
+  color: #fff;
+}
+
+/* Grid of Project Cards */
+.viz-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.viz-grid.hidden {
+  display: none;
+}
+
+/* Project Card (reuse existing) */
+.project-card {
+  background: #2a2a2a;
+  padding: 20px;
+  border-radius: 8px;
+  width: 280px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+.project-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+.project-card h3 {
+  color: #4a90e2;
+  margin-bottom: 8px;
+}
+.project-card p {
+  color: #ccc;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .project-card { width: 100%; max-width: 400px; }
+  .tabs, .viz-buttons { flex-wrap: wrap; }
+}
+/* Projects Section: force project cards side-by-side */
+.viz-grid {
+  display: flex;            /* lay out children in a row */
+  flex-wrap: wrap;          /* wrap to new line on small screens */
+  gap: 20px;                /* space between cards */
+  justify-content: center;  /* center cards in container */
+}
+
+.project-card {
+  flex: 0 1 280px;          /* each card is 280px wide, but can shrink on narrow viewports */
+  box-sizing: border-box;
+}
