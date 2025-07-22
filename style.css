@@ -886,3 +886,82 @@ button:hover,
   flex: 0 1 280px;          /* each card is 280px wide, but can shrink on narrow viewports */
   box-sizing: border-box;
 }
+
+/* ───────────────────────────────────────────────────
+   Education & Certifications Cards
+──────────────────────────────────────────────────── */
+
+/* Container: flex row, wrapping and centered */
+.education-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
+/* Each card: identical box for degrees & certs */
+.education-item {
+  background: #2a2a2a;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Badge or degree image at top of card */
+.education-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  display: block;
+  object-fit: contain;
+}
+
+/* Title inside card */
+.education-item h3 {
+  margin: 0 0 12px;
+  font-size: 1.2rem;
+  color: #4a90e2;
+}
+
+/* Supporting text */
+.education-item p {
+  margin: 0;
+  color: #ccc;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+/* 1) Space between the two education‐container rows */
+.education-section > .education-container:first-of-type {
+  margin-bottom: 40px;
+}
+
+/* 2) Reduce size of the cards in the second row (certificates) */
+.education-section > .education-container:nth-of-type(2) .education-item {
+  width: 240px;      /* shrink from 300px down to 240px */
+  max-width: 240px;
+}
+
+/* Resume button container spacing */
+.resume-button-container {
+  margin-top: 30px;
+}
+
+/* Reuse your btn-resume styles */
+.btn-resume {
+  padding: 12px 24px;
+  background: linear-gradient(to right, #4a90e2, #6f78ff);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.btn-resume:hover {
+  opacity: 0.8;
+  transform: translateY(-2px);
+}
