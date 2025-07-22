@@ -965,3 +965,11 @@ button:hover,
   opacity: 0.8;
   transform: translateY(-2px);
 }
+/* Badge/logo sizing in the education & certification cards */
+.education-item img {
+  max-width: 160px;    /* caps the width */
+  width: 100%;         /* scales down on small cards */
+  height: auto;        /* keeps aspect ratio */
+  margin: 0 auto 16px; /* centers and gives bottom space */
+  display: block;
+}
